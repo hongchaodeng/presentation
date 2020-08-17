@@ -15,5 +15,11 @@
 ![oam-workflow.png](./img/oam-workflow.png)
 - CUE configuration language
     - [K8s yaml 管理的窘境](https://blog.cedriccharly.com/post/20191109-the-configuration-complexity-curse/)
+        - Templating, Overlay, DSL
+        - 简单统一 ⇒ 复杂多养 ⇒ 简单统一
     - [CUE 用法入门](https://cuelang.org/docs/tutorials/tour/intro/)
     - [用 CUE 管理 k8s yaml](https://github.com/cuelang/cue/blob/v0.2.2/doc/tutorial/kubernetes/README.md)
+- CUE 跟 OAM 的关系
+    - OAM 是服务器端的更高级别抽象，达到以应用为中心。
+    - CUE 是客户端工具，为了更高效准确地编写和管理配置文件。
+    - OAM 可以通过 CUE 透出更简单易用的模板：CUE ⇒ GitOps/IaC ⇒ OAM
