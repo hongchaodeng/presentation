@@ -1,6 +1,10 @@
 提纲：
 - OAM：自包含、关注点分离的云原生应用定义
-    - [构建以应用为中心的“Kubernetes”](https://zhuanlan.zhihu.com/p/183857762)
+    - [构建以应用为中心的 Kubernetes](https://zhuanlan.zhihu.com/p/183857762)
+    - 云原生应用平台架构的领域建模:
+        -  [Clean architecture](https://medium.com/@hatajoe/clean-architecture-in-go-4030f11ec1b1)
+        - 越往里，依赖越低，抽象程度越高，接口设计越稳定
+        ![img/oam-domain-arch.jpg](./img/oam-domain-arch.jpg)
     - OAM 基本概念
         - WorkloadDefinition: [cloneset workload definition](https://github.com/oam-dev/catalog/blob/master/workloads/cloneset/workloadDefinition.yaml)
         - TraitDefinition: [ingress trait definition](https://github.com/oam-dev/catalog/blob/master/traits/ingresstrait/config/oam/trait_definition.yaml)
