@@ -4,13 +4,15 @@
     - OAM 基本概念
         - WorkloadDefinition: [cloneset workload definition](https://github.com/oam-dev/catalog/blob/master/workloads/cloneset/workloadDefinition.yaml)
         - TraitDefinition: [ingress trait definition](https://github.com/oam-dev/catalog/blob/master/traits/ingresstrait/config/oam/trait_definition.yaml)
-        - Component: [web deployment](https://github.com/oam-dev/catalog/blob/master/traits/simplerollouttrait/config/samples/sample_deployment_workload/sample_component.yaml)
-        - ApplicationConfiguration: [web component + rollout trait](https://github.com/oam-dev/catalog/blob/master/traits/simplerollouttrait/config/samples/sample_deployment_workload/sample_application_config.yaml)
-            - 自包含：所有服务组件和运维能力都在一个定义里。[更复杂的 Service Tracker 微服务示例](https://github.com/oam-dev/samples/blob/master/2.ServiceTracker_App/ApplicationConfiguration/tracker-app-config-managed.yaml)
+        - [Component](https://github.com/oam-dev/samples/tree/master/2.ServiceTracker_App/Components)
+        - [ApplicationConfiguration](https://github.com/oam-dev/samples/blob/master/2.ServiceTracker_App/ApplicationConfiguration/tracker-app-config-managed.yaml)
+            - 自包含：所有服务组件和运维能力都在一个定义里。
             - 结构化：traits attached to components，避免了 label selector 等关联资源的方式，让用户使用更简单，体验也更友好。
 				![oam-simplify-view.png](.//img/oam-simplify-view.png)
 
-        - [Demo](https://github.com/oam-dev/catalog/tree/master/traits/simplerollouttrait)
+        - Demo
+            - Install [KinD](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
+            - Follow the [README](./oam/README.md) to deploy OAM app
     - 关注点分离:
 ![oam-workflow.png](./img/oam-workflow.png)
 - CUE configuration language

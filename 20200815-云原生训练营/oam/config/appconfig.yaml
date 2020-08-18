@@ -1,0 +1,29 @@
+apiVersion: core.oam.dev/v1alpha2
+kind: ApplicationConfiguration
+metadata:
+  name: example
+spec:
+  components:
+    - componentName: web
+      traits:
+        - trait:
+            apiVersion: v1
+            kind: Service
+            metadata:
+              name: web
+            spec:
+              selector:
+                app: web
+              ports:
+              - port: 80
+        - trait:
+            apiVersion: extensions/v1beta1
+            kind: Ingress
+            spec:
+              rules:
+              - http:
+                  paths:
+                  - path: /
+                    backend:
+                      serviceName: web
+                      servicePort: 80
