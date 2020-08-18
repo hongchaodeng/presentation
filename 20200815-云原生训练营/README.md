@@ -1,9 +1,13 @@
 提纲：
 - OAM：自包含、关注点分离的云原生应用定义
     - [构建以应用为中心的 Kubernetes](https://zhuanlan.zhihu.com/p/183857762)
+        - k8s 统一了底层基础设施 (Compute, Network, Storage)，但是在应用层上没有进一步往上抽象。
+          当前应用管理和用户体验上有待提高。
     - 云原生应用平台架构的领域建模:
-        -  [Clean architecture](https://medium.com/@hatajoe/clean-architecture-in-go-4030f11ec1b1)
-        - 越往里，依赖越低，抽象程度越高，接口设计越稳定
+        -  [Clean architecture](https://medium.com/@hatajoe/clean-architecture-in-go-4030f11ec1b1): 借鉴微服务领域建模的思想
+            - 越往里，依赖越低，抽象程度越高，接口设计越稳定
+            - 分层设计，减少依赖 ⇒ 可扩展、易标准化的架构
+        - 核心层为一个符合现代交付体系的应用模型 (OAM)
         ![img/oam-domain-arch.jpg](./img/oam-domain-arch.jpg)
     - OAM 基本概念
         - WorkloadDefinition: [cloneset workload definition](https://github.com/oam-dev/catalog/blob/master/workloads/cloneset/workloadDefinition.yaml)
