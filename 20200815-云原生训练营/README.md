@@ -5,6 +5,7 @@
 - OAM：自包含、关注点分离的云原生应用定义
     - [构建以应用为中心的 Kubernetes](https://zhuanlan.zhihu.com/p/183857762)
         - k8s 统一了底层基础设施 (Compute, Network, Storage)，但是在应用层上没有进一步往上抽象。大家在 k8s 上主要以使用单个 workload 为主。一旦能力多了，整个管理和扩展的难度会增大，且用户体验也不够友好。
+        - 尝试往应用层做抽象，做统一的云原生应用管理架构。
     - 云原生应用管理架构的领域建模:
         -  [Clean architecture](https://medium.com/@hatajoe/clean-architecture-in-go-4030f11ec1b1): 可扩展、易标准化的架构
             - 越往里，依赖越低，抽象程度越高，接口设计越稳定
